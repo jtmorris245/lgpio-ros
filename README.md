@@ -1,6 +1,16 @@
 
 lgpio is a library for Linux Single Board Computers (SBC) which allows control of the General Purpose Input Outputs (GPIO).
 
+This package is a ***C/C++ Library Only*** ROS packaging of the lgpio library.
+This does not include the Python, or remote/daemon functionality.
+Please feel free to make pull requests adding the remote/daemon functionality.
+I don't have enough experience with ROS to tell if combining the python module into the same package is a good idea, but if it is, please feel free.
+
+Keeping with the original project, this package is released with the Unlicense.
+You may use this project as you see fit.
+
+For information, examples, etc, please see the upstream project  [here](https://github.com/joan2937/lg).
+
 ## Features
 
 * reading and writing GPIO singly and in groups
@@ -11,71 +21,9 @@ lgpio is a library for Linux Single Board Computers (SBC) which allows control o
 * SPI wrapper
 * serial link wrapper
 
-* daemon interface
-* access control (daemon interface)
-* file handling (daemon interface)
-* creating and running scripts (daemon interface)
-* network access (daemon interface)
-
-## Archive components
-
-### The base library
-
-* The lgpio C library to control local GPIO.
-
-### The daemon
-
-* The rgpiod daemon offers a socket interface to the lgpio library.
-* The rgpio C library to control local and remote GPIO via the daemon.
-
-### Python modules
-
-* The lgpio Python module to control local GPIO.
-* The rgpio Python module to control local and remote GPIO via the daemon.
-
-### Utilities
-
-* The rgs shell utility to control local and remote GPIO via the daemon.
-
-## Documentation
-
-See http://abyz.me.uk/lg/
-
-## Example programs
-
-See http://abyz.me.uk/lg/examples.html and the examples in the
-EXAMPLES directory.
-
-## GPIO
-
-ALL GPIO are identified by their gpiochip line number.
-
-## Download & Install
-
-### Prerequisites
-
-A few packages are needed during installation of the Python modules.
-
-* the SWIG code generator (to build lgpio.py from the C library)
-* the Python development files (to build lgpio.py)
-* the Python set up tools (to install lgpio.py and rgpio.py)
-
-On Debian like systems these packages may be installed with the following commands.
-
-```
-sudo apt install swig python-dev python3-dev
-sudo apt install python-setuptools python3-setuptools
-
-```
-
-### Download & Install
-
-```
-wget https://github.com/joan2937/lg/archive/master.zip
-unzip master.zip
-cd lg-master
-make
-sudo make install
-
-```
+* ~~@daemon interface~~
+* ~~access control (daemon interface)~~
+* ~~file handling (daemon interface)~~
+* ~~creating and running scripts (daemon interface)~~
+* ~~network access (daemon interface)~~
 
